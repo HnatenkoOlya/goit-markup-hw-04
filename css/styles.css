@@ -80,7 +80,18 @@ a {
     color: var(--link-color);
     padding: 24px 0;
     position: relative;
-
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.header-link.active::after {
+    content: "";
+    position: absolute; 
+    left: 0; 
+    display: block;
+    bottom: -1px; 
+    width: 48px;
+    height: 4px;
+    background-color: #404bbf; 
+    border-radius: 2px; 
 }
 .container {
     width: 1158px;
@@ -125,6 +136,7 @@ a {
     color: var(--link-color-add);
     display: flex;
     gap: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .header-networks:last-child {
     margin-right: 0;
@@ -319,7 +331,10 @@ a {
     justify-content: center; 
     color: var(--color-customers);
 }
-.customers-a:hover,
+.customers-a:hover {
+    border-color: #404bbf; 
+    color: #404bbf;
+}
 .customers-a:focus {
     border-color: #404bbf; 
     color: #404bbf;
@@ -390,6 +405,7 @@ a {
     padding: 12px 24px;
     border: 1px solid var(--color-border);
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-port:hover,
 .btn-port:focus {
@@ -421,12 +437,14 @@ a {
 .a-img {
     display: block;
     text-decoration: none;
-    display: flex;
     padding: 12px 24px;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
     flex-direction: column;
+}
+.a-img:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); 
 }
 .img-h-p {
     font-weight: 500;
@@ -463,6 +481,7 @@ a {
     border-radius: 50%;
     align-items: center;
     justify-content: center; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .social-networks-a:hover,
 .social-networks-a:focus {
