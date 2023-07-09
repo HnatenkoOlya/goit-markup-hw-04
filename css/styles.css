@@ -40,6 +40,7 @@ a {
     text-transform: uppercase;
     color: var(--letter-spacing);
     margin-right: 76px;
+    padding-top: 25.5px;
 }
 .link-logo-footer {
     font-family: "Raleway", sans-serif;
@@ -70,7 +71,9 @@ a {
 .header {
     border-bottom: 1px solid var(--color-border);
     box-shadow:  0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
-
+    width: 1440px;
+    height: 72px;
+    top: 24px;
 }
 .header-link {
     font-weight: 500;
@@ -83,15 +86,16 @@ a {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .header-link.active::after {
-    content: "";
+    content: '';
     position: absolute; 
     left: 0; 
     display: block;
     bottom: -1px; 
-    width: 48px;
+    width: 100%;
     height: 4px;
     background-color: #404bbf; 
-    border-radius: 2px; 
+    border-radius: 2px;
+    color: #404bbf;  
 }
 .container {
     width: 1158px;
@@ -118,6 +122,7 @@ a {
 .header-list {
     display: flex;
     gap: 40px;
+    padding-top: 24px;
 }
 .header-item {
     margin-right: 40px;
@@ -137,6 +142,9 @@ a {
     display: flex;
     gap: 40px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.header-networks.link {
+    padding-top: 24px;
 }
 .header-networks:last-child {
     margin-right: 0;
@@ -183,6 +191,7 @@ a {
 .btn:focus {
     background-color:  #404BBF;
 }
+/*Feature*/
 .feature {
     padding: 120px 0;
 }
@@ -206,12 +215,15 @@ a {
     background-color: #f4f4fd; 
     border-radius: 4px;
     margin-bottom: 8px;
+    width: 264px;
+    height: 112px;
+    padding: 24px 0;
 }
-.feature-ic
 .feature-p {
     list-style: none;
     display: flex;
-    gap: 24px; 
+    gap: 24px;
+    text-align: center; 
 }
 .strategy {
     font-weight: 500;
@@ -259,7 +271,7 @@ a {
     align-items: flex-start;
     width: calc((100% - 48px) / 3);
 }
-
+/*Our Team*/
 .section-team {
     background-color: #F4F4FD;
     padding: 120px 0;
@@ -302,6 +314,7 @@ a {
    border-top: none;
    padding: 32px 0;
 }
+/*Customers*/
 .customers {
     padding-top: 120px; 
     padding-bottom: 120px;
@@ -319,7 +332,6 @@ a {
 .customers-ul-li {
     width: calc((100% - 120px) / 6); 
     height: 88px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-a {
     width: 100%;
@@ -330,18 +342,20 @@ a {
     align-items: center; 
     justify-content: center; 
     color: var(--color-customers);
-}
-.customers-a:hover {
-    border-color: #404bbf; 
-    color: #404bbf;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .customers-a:focus {
+    border-color: #404bbf; 
+    color: #404bbf; 
+}
+.customers-a:hover {
     border-color: #404bbf; 
     color: #404bbf;
 }
 .customers-svg {
     fill: currentColor;  
 }
+/*Footer*/
 .footer {
     background-color: var(--link-color);
     padding: 100px 0;
@@ -361,7 +375,9 @@ a {
 }
 .footer-soc {
     display: flex; 
-    gap: 16px; 
+    gap: 16px;
+    justify-content: center;
+    margin-right: 80px;
 }
 .footer-soc-li {
     width: 40px;
@@ -374,7 +390,8 @@ a {
     background-color: var(--letter-spacing);
     border-radius: 50%;
     align-items: center; 
-    justify-content: center; 
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .footer-soc-a:hover,
 .footer-soc-a:focus {
@@ -462,6 +479,7 @@ a {
     color: var(--link-color-add);
     text-align: center;
 }
+/*social*/
 .social-networks {
     display: flex; 
     list-style: none;
@@ -483,11 +501,11 @@ a {
     justify-content: center; 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.social-networks-a:hover{
-    background-color: #404bbf;
-}
 .social-networks-a:focus {
     background-color: #404bbf; 
+}
+.social-networks-a:hover{
+    background-color: #404bbf;
 }
 .social-networks-svg {
     fill: var(--color-footer);
@@ -501,7 +519,8 @@ a {
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.is-hidden {
+.backdrop.is-hidden {
+    display: none;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
