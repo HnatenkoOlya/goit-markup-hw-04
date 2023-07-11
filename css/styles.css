@@ -366,6 +366,15 @@ a {
     align-items: baseline;
     margin-right: 120px;
 }
+.footer-a-p {
+    margin-right: 120px;
+}
+.footer-p {
+    line-height: 1.5;
+    color: var( --color-footer);
+    letter-spacing: 0.02em;
+    max-width: 264px;
+}
 .footer-p-div {
     font-weight: 500;
     font-size: 16px;
@@ -397,12 +406,6 @@ a {
 .footer-soc-a:hover,
 .footer-soc-a:focus {
     background-color: #31d0aa; 
-}
-.footer-p {
-    line-height: 1.5;
-    color: var( --color-footer);
-    letter-spacing: 0.02em;
-    max-width: 264px;
 }
 .btn-menu {
     display: flex;
@@ -447,11 +450,6 @@ a {
 }
 .item-img-li {
     width: calc((100% - 48px) / 3);
-    position: relative;
-}
-.item-img-li:hover .overlay {
-    transform: translateY(0%);
-    overflow: hidden; 
 }
 .div-a {
     padding: 32px 16px;
@@ -470,21 +468,21 @@ a {
 }
 .a-img:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    transform: translateY(0%); 
+    transform: translateY(0%);
 }
 .overlay {
     position: relative;
     overflow: hidden;
 }
 .overlay-p {
-    position: absolute;
-    top: 0; 
+    position: absolute; 
+    top: 0;
     font-size: 16px; 
     line-height: 1.5; 
-    letter-spacing: 0.02em; 
+    letter-spacing: 0.02em;
     color: var(--color-footer);
     padding: 40px 32px; 
-    background-color: #4d5ae5;
+    background-color: #4d5ae5; 
     height: 100%; 
     width: 100%; 
     transform: translateY(100%);
@@ -537,6 +535,7 @@ a {
 .social-networks-svg {
     fill: var(--color-footer);
 }
+/*Modal*/
 .backdrop {
     position: fixed;
     top: 0;
